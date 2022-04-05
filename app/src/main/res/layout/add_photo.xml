@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?actionBarSize">
+
+
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/close"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@string/font_regular"
+            android:layout_marginEnd="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/close"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_create_asset_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#CCC"
+        android:gravity="center"
+        android:padding="15dp"
+        android:fontFamily="@string/font_regular"
+        android:text="@string/you_can_capture_upto_3_photos"
+        android:textSize="@dimen/menu_title_size"
+        android:visibility="visible"
+        tools:ignore="SpUsage" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:orientation="vertical"
+            android:paddingBottom="60dp">
+
+            <LinearLayout
+                android:id="@+id/mobile_number_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/margin"
+                android:background="@drawable/new_bg_log_in_btn_purple"
+                android:text="@string/add_photo"
+                android:textAllCaps="false"
+                android:fontFamily="@string/font_regular"
+                android:textColor="@android:color/white"
+                tools:ignore="RtlHardcoded" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                >
+                <Button
+                    android:id="@+id/btn_save_inspection"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/new_bg_log_in_btn_purple"
+                    android:text="@string/save_image_local"
+                    android:fontFamily="@string/font_regular"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

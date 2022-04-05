@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="adapter"
+            type="com.nic.thooimaikaavalar_old.adapter.WasteCollectedAdapterServer" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:id="@+id/card_view"
+        app:cardElevation="@dimen/_12sdp"
+        android:outlineSpotShadowColor="@color/purple"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:layout_margin="@dimen/_7sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delete_icon"
+                android:contentDescription="@string/delete_icon"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:tint="@color/colorPrimaryDark"/>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/mcc_id_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/mcc_id"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/mcc_id"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/mcc_name_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/mcc_name"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/mcc_name"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/village_name_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/village_name"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/village_name"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/households_waste_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/household_waste"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/households_waste"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/shops_waste_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/shops_waste"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/shops_waste"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/market_waste_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/market_waste"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/market_waste"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/hotels_waste_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/hotels_waste"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/hotels_waste"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/others_waste_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/others_waste"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/others_waste"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/tot_bio_waste_collected_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/tot_bio_waste_collected"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/tot_bio_waste_collected"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/tot_bio_waste_shredded_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/tot_bio_waste_shredded"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/tot_bio_waste_shredded"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/tot_bio_compost_produced_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/tot_bio_compost_produced"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/tot_bio_compost_produced"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/tot_bio_compost_sold_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/tot_bio_compost_sold"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/tot_bio_compost_sold"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:id="@+id/date_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textSize="15sp"
+                    android:textColor="@color/grey1"
+                    android:text="@string/date_of_save"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:text="@string/semi_colan"
+                    android:fontFamily="sans-serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="match_parent"
+                    android:gravity="start"
+                    android:textColor="@color/border_line"
+                    android:textSize="15sp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/date"
+                    android:fontFamily="sans-serif" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/log_in_bg_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/close_icon"
+            android:id="@+id/tv_1"
+            android:fontFamily="@string/font_regular"
+            android:text="@string/how_many_thooimai_kaavalars_add"
+            >
+        </TextView>
+        <TextView
+            android:fontFamily="@string/font_regular"
+            android:layout_below="@+id/tv_1"
+            android:id="@+id/tv_create_asset_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/you_can_add_upto_5_person"
+            android:textSize="@dimen/menu_title_size"
+            android:visibility="visible"
+            tools:ignore="SpUsage" />
+
+        <ImageView
+            android:id="@+id/close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@mipmap/close_icon"
+            android:contentDescription="@string/close_icon" />
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:orientation="horizontal"
+            android:layout_below="@id/tv_create_asset_title"
+            android:weightSum="3"
+            android:layout_centerHorizontal="true"
+            android:elevation="@dimen/_7sdp"
+            android:background="@drawable/log_in_bg_background">
+
+            <TextView
+                android:fontFamily="@string/font_regular"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/minus"
+                android:text="@string/h_fun"
+                />
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"/>
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@string/font_regular"
+                android:id="@+id/number"
+                android:text="@string/_1"
+                />
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"/>
+
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:fontFamily="@string/font_regular"
+                android:id="@+id/add"
+                android:text="@string/plus_symbol"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:fontFamily="@string/font_regular"
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/cancel"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/menu_title_size"
+                android:visibility="visible"
+                tools:ignore="ButtonStyle,SpUsage" />
+
+            <Button
+                android:fontFamily="@string/font_regular"
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/ok"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/menu_title_size"
+                tools:ignore="ButtonStyle,SpUsage" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/basic_recycler"
+        android:title="Basic Details"/>
+    <item android:id="@+id/thooimai_kavalar_recyler"
+        android:title="Thooimai Kaavalar" />
+    <item android:id="@+id/component_photo_recyler"
+        android:title="Component Photo" />
+    <item android:id="@+id/waste_collected_from"
+        android:title="Waste Collected" />
+
+</menu>

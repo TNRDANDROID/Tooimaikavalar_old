@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/full_transparent">
+
+    <RelativeLayout
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/details_layout"
+        android:background="@drawable/card_bg_color"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/l_b_c_h_bg">
+
+            <TextView
+                android:padding="@dimen/_5sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_details"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:id="@+id/close_icon"
+                android:padding="@dimen/_1sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/close"
+                android:tint="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:contentDescription="@string/close_icon" />
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_below="@+id/text_layout"
+            android:layout_above="@+id/bottom_layout"
+            >
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             tools:ignore="ExtraText">
+
+             //Check dam
+             <LinearLayout
+                 android:visibility="visible"
+                 android:id="@+id/id_1"
+                 android:paddingLeft="@dimen/_15sdp"
+                 android:paddingRight="@dimen/_15sdp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+
+
+        //Enter Length
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/length_layout"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/length_of_weir_in_m"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey_9"
+                android:textSize="@dimen/_13sdp"/>
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/elevation_bottom_lite_bg_white">
+
+            <EditText
+                android:id="@+id/length"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:hint="@string/enter_length"
+                android:textSize="@dimen/_13sdp"
+                android:inputType="numberDecimal"
+                android:background="@null"
+                android:importantForAutofill="no" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //Enter Breath
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/upload_inspection_report"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/height_of_weir_in_m"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey_9"
+                android:textSize="@dimen/_13sdp"/>
+
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/elevation_bottom_lite_bg_white">
+
+
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@null"
+                    android:hint="@string/enter_height"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_13sdp"
+                    android:importantForAutofill="no" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //Enter Height
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/height_layout"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/length_of_water_storage_in_upstream_side_of_channel_in_m"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey_9"
+                android:textSize="@dimen/_13sdp"/>
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:background="@drawable/elevation_bottom_lite_bg_white"
+                >
+            <EditText
+                android:id="@+id/length_of_water_storage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:hint="@string/enter_length_of_water_storage"
+                android:textSize="@dimen/_13sdp"
+                android:inputType="numberDecimal"
+                android:background="@null"
+                android:importantForAutofill="no" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //Enter Capacity
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/capacity_layout"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+
+            >
+            <TextView
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/observation_premonsoon_gw_depth_in_m"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/grey_9"
+                android:textSize="@dimen/_13sdp"/>
+
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/elevation_bottom_lite_bg_white">
+
+            <EditText
+                android:id="@+id/observation_premonsoon_gw_depth_in_m_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:hint="@string/enter_observation"
+                android:textSize="@dimen/_13sdp"
+                android:inputType="numberDecimal"
+                android:background="@null"
+                android:importantForAutofill="no" />
+            </LinearLayout>
+
+        </LinearLayout>
+         </LinearLayout>
+
+             //Trench cutting in Barren/Fallow lands
+             <LinearLayout
+                 android:visibility="gone"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/id_2"
+             android:orientation="vertical">
+             //No of trenches  per one work site
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_21"
+                 android:orientation="vertical"
+                 android:gravity="center_vertical"
+                 >
+                 <TextView
+                     android:layout_marginTop="@dimen/_5sdp"
+                     android:layout_marginStart="@dimen/_5sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/no_of_trenches_per_one_work_site"
+                     android:layout_gravity="center_vertical"
+                     android:textColor="@color/grey_9"
+                     android:textSize="@dimen/_13sdp"/>
+
+                 <LinearLayout
+                     android:layout_margin="@dimen/_10sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                     <EditText
+                         android:id="@+id/no_of_trenches_per_one_work_site"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:textAlignment="center"
+                         android:textColor="#000"
+                         android:hint="@string/enter_no_of_trenches"
+                         android:textSize="@dimen/_13sdp"
+                         android:inputType="numberDecimal"
+                         android:background="@null"
+                         android:importantForAutofill="no" />
+                 </LinearLayout>
+
+             </LinearLayout>
+
+             //Length (in m)
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_22"
+                 android:orientation="vertical"
+                 android:gravity="center_vertical"
+                 >
+                 <TextView
+                     android:layout_marginTop="@dimen/_5sdp"
+                     android:layout_marginStart="@dimen/_5sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/length_in_m"
+                     android:layout_gravity="center_vertical"
+                     android:textColor="@color/grey_9"
+                     android:textSize="@dimen/_13sdp"/>
+
+                 <LinearLayout
+                     android:layout_margin="@dimen/_10sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                     <EditText
+                         android:id="@+id/length_in_m"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:textAlignment="center"
+                         android:textColor="#000"
+                         android:hint="@string/enter_length"
+                         android:textSize="@dimen/_13sdp"
+                         android:inputType="numberDecimal"
+                         android:background="@null"
+                         android:importantForAutofill="no" />
+                 </LinearLayout>
+
+             </LinearLayout>
+
+
+            //Width (in m)
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_23"
+                 android:orientation="vertical"
+                 android:gravity="center_vertical"
+                 >
+                 <TextView
+                     android:layout_marginTop="@dimen/_5sdp"
+                     android:layout_marginStart="@dimen/_5sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/width_in_m"
+                     android:layout_gravity="center_vertical"
+                     android:textColor="@color/grey_9"
+                     android:textSize="@dimen/_13sdp"/>
+
+                 <LinearLayout
+                     android:layout_margin="@dimen/_10sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                     <EditText
+                         android:id="@+id/width_in_m"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:textAlignment="center"
+                         android:textColor="#000"
+                         android:hint="@string/enter_width"
+                         android:textSize="@dimen/_13sdp"
+                         android:inputType="numberDecimal"
+                         android:background="@null"
+                         android:importantForAutofill="no" />
+                 </LinearLayout>
+
+             </LinearLayout>
+
+
+            //depth (in m)
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_24"
+                 android:orientation="vertical"
+                 android:gravity="center_vertical"
+                 >
+                 <TextView
+                     android:layout_marginTop="@dimen/_5sdp"
+                     android:layout_marginStart="@dimen/_5sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/depth_in_m"
+                     android:layout_gravity="center_vertical"
+                     android:textColor="@color/grey_9"
+                     android:textSize="@dimen/_13sdp"/>
+
+                 <LinearLayout
+                     android:layout_margin="@dimen/_10sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                     <EditText
+                         android:id="@+id/depth_in_m"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:textAlignment="center"
+                         android:textColor="#000"
+                         android:hint="@string/enter_depth"
+                         android:textSize="@dimen/_13sdp"
+                         android:inputType="numberDecimal"
+                         android:background="@null"
+                         android:importantForAutofill="no" />
+                 </LinearLayout>
+
+             </LinearLayout>
+
+            //Observation (premonsoon GW depth in m)
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_25"
+                 android:orientation="vertical"
+                 android:gravity="center_vertical"
+                 >
+                 <TextView
+                     android:layout_marginTop="@dimen/_5sdp"
+                     android:layout_marginStart="@dimen/_5sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/observation_premonsoon_gw_depth_in_m"
+                     android:layout_gravity="center_vertical"
+                     android:textColor="@color/grey_9"
+                     android:textSize="@dimen/_13sdp"/>
+
+                 <LinearLayout
+                     android:layout_margin="@dimen/_10sdp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                     <EditText
+                         android:id="@+id/observation_premonsoon_gw_depth_in_m_2"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:textAlignment="center"
+                         android:textColor="#000"
+                         android:hint="@string/enter_observation"
+                         android:textSize="@dimen/_13sdp"
+                         android:inputType="numberDecimal"
+                         android:background="@null"
+                         android:importantForAutofill="no" />
+                 </LinearLayout>
+
+             </LinearLayout>
+
+
+         </LinearLayout>
+
+             //Injection well recharge shaft in water bodies
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_3"
+                 android:orientation="vertical">
+
+                 //No of units per waterbody
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_31"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/no_of_units_per_water_body"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/no_of_units_per_waterbody"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_no_of_units_per_water_body"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_32"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_3"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+             //Recharge wells in Rivers/Streams
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_4"
+                 android:orientation="vertical">
+                 //No of units
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_41"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/no_of_units"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/no_of_units"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_no_of_units"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Length (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_42"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/length_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/length_in_m_4"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_length"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //Width (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_43"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/width_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/width_in_m_4"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_width"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //depth (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_44"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/depth_in_m_4"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_depth"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_45"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_4"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+             //Afforestation
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_5"
+                 android:orientation="vertical">
+
+                 //Area covered (in Hect.)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/area_covered_in_Hect"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/area_covered_in_hect"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/area_covered_in_hect_5"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_area_covered"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no"
+                             tools:ignore="TooManyViews" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                //No of plantation per site
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/no_of_plantation_per_site"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/no_of_plantation_per_site"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/no_of_plantation_per_site_5"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_no_of_plantation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_55"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_5"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+             </LinearLayout>
+
+             //Farm ponds
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_6"
+                 android:orientation="vertical">
+                 //No of units
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_61"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/no_of_units"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/no_of_units_6"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_no_of_units"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Length (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_62"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/length_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/length_in_m_6"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_length"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //Width (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_63"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/width_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/width_in_m_6"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_width"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //depth (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_64"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/depth_in_m_6"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_depth"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_65"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_6"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+             //Rooftop RWHS
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_7"
+                 android:orientation="vertical">
+
+                 //If storage structure/sump available
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_71"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/if_storage_structure_sump_available"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:background="@drawable/elevation_bottom_lite_bg_white"
+                         android:orientation="horizontal">
+                         <RadioGroup
+                             android:id="@+id/radioYN"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:weightSum="2"
+                             android:gravity="center_vertical"
+                             android:layout_gravity="center_vertical"
+
+                             android:orientation="horizontal"
+                             tools:ignore="UselessParent">
+                         <RadioButton
+                             android:id="@+id/storage_structure_sump_available_yes"
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:gravity="center_vertical"
+                             android:layout_gravity="center_vertical"
+                             android:layout_marginStart="@dimen/_20sdp"
+                             android:background="@null"
+                             android:text="@string/yes"
+                             android:textColor="#000"
+                             android:textSize="@dimen/_13sdp"
+                             />
+                         <RadioButton
+                             android:gravity="center_vertical"
+                             android:layout_gravity="center_vertical"
+                             android:layout_marginStart="@dimen/_40sdp"
+                             android:id="@+id/storage_structure_sump_available_no"
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:text="@string/no"
+                             android:textColor="#000"
+                             android:textSize="@dimen/_13sdp"
+                             android:background="@null"
+                             />
+                         </RadioGroup>
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Length/diameter  (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_72"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/length_diameter_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/length_diameter_in_m"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_length_diameter"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //Width/diameter  (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_73"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/width_diameter_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/width_diameter_in_m"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_width_diameter"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //depth (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_74"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/depth_in_m_7"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_depth"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_75"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_7"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+             //Recharge shaft
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_8"
+                 android:orientation="vertical">
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_85"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     tools:ignore="UselessParent">
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_8"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+             </LinearLayout>
+
+             //Soakpit
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_9"
+                 android:orientation="vertical">
+
+                 //Individual/Community
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_91"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/individual_community"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_40sdp"
+                         android:background="@drawable/elevation_bottom_lite_bg_white"
+                         android:orientation="horizontal">
+                         <RadioGroup
+                             android:id="@+id/radioInd_Comm"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:weightSum="2"
+                             android:gravity="center_vertical"
+                             android:layout_gravity="center_vertical"
+
+                             android:orientation="horizontal"
+                             tools:ignore="UselessParent">
+                             <RadioButton
+                                 android:id="@+id/individual"
+                                 android:layout_weight="1"
+                                 android:layout_width="0dp"                             android:layout_height="wrap_content"
+                                 android:gravity="center_vertical"
+                                 android:layout_gravity="center_vertical"
+                                 android:layout_marginStart="@dimen/_20sdp"
+                                 android:background="@null"
+                                 android:text="@string/individual"
+                                 android:textColor="#000"
+                                 android:textSize="@dimen/_13sdp" />
+                             <RadioButton
+                                 android:gravity="center_vertical"
+                                 android:layout_gravity="center_vertical"
+                                 android:layout_marginStart="@dimen/_40sdp"
+                                 android:id="@+id/community"
+                                 android:layout_weight="1"
+                                 android:layout_width="0dp"                             android:layout_height="wrap_content"
+                                 android:text="@string/community"
+                                 android:textColor="#000"
+                                 android:textSize="@dimen/_13sdp"
+                                 android:background="@null"
+                                 />
+                         </RadioGroup>
+
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_95"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_9"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+             //Sunken pond and desilting of channel
+             <LinearLayout
+                 android:visibility="gone"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/id_10"
+                 android:orientation="vertical">
+
+                 //Length of channel  (in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_10_1"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/length_of_channel_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/length_of_channel_in_m_10"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_length_of_channel_in_m"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+
+                 //Observation (premonsoon GW depth in m)
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/id_105"
+                     android:orientation="vertical"
+                     android:gravity="center_vertical"
+                     >
+                     <TextView
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginStart="@dimen/_5sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/observation_premonsoon_gw_depth_in_m"
+                         android:layout_gravity="center_vertical"
+                         android:textColor="@color/grey_9"
+                         android:textSize="@dimen/_13sdp"/>
+
+                     <LinearLayout
+                         android:layout_margin="@dimen/_10sdp"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/elevation_bottom_lite_bg_white">
+
+                         <EditText
+                             android:id="@+id/observation_premonsoon_gw_depth_in_m_10"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/_40sdp"
+                             android:textAlignment="center"
+                             android:textColor="#000"
+                             android:hint="@string/enter_observation"
+                             android:textSize="@dimen/_13sdp"
+                             android:inputType="numberDecimal"
+                             android:background="@null"
+                             android:importantForAutofill="no" />
+                     </LinearLayout>
+
+                 </LinearLayout>
+
+             </LinearLayout>
+
+
+         </RelativeLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bottom_layout">
+        <TextView
+            android:id="@+id/submit_update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:paddingLeft="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:background="@drawable/add_button"
+            android:text="@string/submit"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skip"
+            android:id="@+id/skip"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

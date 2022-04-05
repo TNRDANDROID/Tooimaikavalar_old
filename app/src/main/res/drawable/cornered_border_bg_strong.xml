@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid   android:color="#00CCCCCC"/>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid   android:color="#10CCCCCC"/>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+
+            <solid   android:color="#20CCCCCC"/>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid   android:color="#30CCCCCC"/>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid   android:color="#30CCCCCC"/>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid   android:color="#50CCCCCC"/>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape>
+           <solid    android:color="@color/white"></solid>
+            <corners android:topLeftRadius="40dp"
+                     android:topRightRadius="40dp"/>
+        </shape>
+    </item>
+</layer-list>

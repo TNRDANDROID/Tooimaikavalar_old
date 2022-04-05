@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.nic.thooimaikaavalar_old.activity.HomePage" />
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.nic.thooimaikaavalar_old.activity.HomePage">
+
+            <RelativeLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/t_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/home_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="@string/font_regular"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/t_1"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/hi_welcomeback"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="@string/font_regular"/>
+
+                <ImageView
+                    android:id="@+id/log_out"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:onClick="@{()-> activity.logout()}"
+                    android:src="@mipmap/log_out"
+                    android:contentDescription="@string/log_out_icon" />
+
+                <ImageView
+                    android:id="@+id/menu_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:onClick="@{()-> activity.openMenuDrawer()}"
+                    android:src="@drawable/ic_menu_black_24dp"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/menu_icon" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="-30dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_layout">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_view"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:padding="@dimen/_10sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            tools:ignore="UselessParent">
+
+                            <TextView
+                                android:fontFamily="@string/font_regular"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:id="@+id/title"
+                                android:textColor="@color/border_line"/>
+
+                            <TextView
+                                android:fontFamily="@string/font_regular"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:id="@+id/district"
+                                android:textColor="@color/border_line"/>
+
+                            <TextView
+                                android:fontFamily="@string/font_regular"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:id="@+id/block"
+                                android:textColor="@color/border_line"/>
+
+                            <TextView
+                                android:fontFamily="@string/font_regular"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:id="@+id/fin_year"
+                                android:textColor="@color/border_line"/>
+
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_layout"
+                android:layout_above="@+id/textView1">
+            <RelativeLayout
+                android:id="@+id/rellay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grad"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/imgUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_margin="9dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle"
+                        android:padding="8dp"
+                        android:src="@mipmap/avatar"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:fontFamily="@string/font_regular"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <TextView
+                    android:id="@+id/designation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@string/font_regular"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/sync_count_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rellay1"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/followersBg"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@string/font_regular"
+                        android:text="@string/pending_works_for_upload"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/followingBg"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp">
+
+
+
+                    <TextView
+                        android:id="@+id/pendingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@string/font_regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@string/font_regular"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sync_count_layout"
+                >
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/view_housing_works"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:clickable="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp"
+                                app:cardBackgroundColor="@color/white"
+                                android:id="@+id/add_mcc_card"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:cardElevation="@dimen/_12sdp"
+                                android:outlineSpotShadowColor="@color/purple"
+                                tools:ignore="UnusedAttribute">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    tools:ignore="TooDeepLayout">
+
+                                    <View
+                                        android:id="@+id/v_1"
+                                        android:layout_width="@dimen/_4sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/line_shape_curved_bg"/>
+
+                                    <Button
+                                        android:onClick="@{()-> activity.viewVillageList()}"
+                                        android:clickable="true"
+                                        android:padding="@dimen/_4sdp"
+                                        android:layout_marginStart="@dimen/_4sdp"
+                                        android:id="@+id/add_new_mcc"
+                                        android:layout_width="match_parent"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/add_new_mcc"
+                                        android:fontFamily="@string/font_regular"
+                                        android:background="@color/full_transparent"
+                                        android:textAlignment="center"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_14sdp"
+                                        />
+                                    <ImageView
+                                        android:padding="@dimen/_3sdp"
+                                        android:id="@+id/icon_1"
+                                        android:layout_centerVertical="true"
+                                        android:layout_width="@dimen/_25sdp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:src="@drawable/add_user"
+                                        android:contentDescription="@string/add_icon" />
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/add_mcc_card"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp"
+                                app:cardBackgroundColor="@color/white"
+                                android:id="@+id/edit_mcc_card"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:cardElevation="@dimen/_12sdp"
+                                android:outlineSpotShadowColor="@color/purple"
+                                tools:ignore="UnusedAttribute">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:id="@+id/v_2"
+                                        android:layout_width="@dimen/_4sdp"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/line_shape_curved_bg"/>
+
+                                    <Button
+                                        android:fontFamily="@string/font_regular"
+                                        android:onClick="@{()-> activity.viewMCCBasicDetailsList()}"
+                                        android:clickable="true"
+                                        android:layout_toEndOf="@+id/v_2"
+                                        android:background="@color/full_transparent"
+                                        android:id="@+id/edit_mcc"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerHorizontal="true"
+                                        android:text="@string/edit_mcc"
+                                        android:textAlignment="center"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_14sdp"
+                                        />
+
+                                    <ImageView
+                                        android:padding="@dimen/_3sdp"
+                                        android:id="@+id/icon_3"
+                                        android:layout_centerVertical="true"
+                                        android:layout_width="@dimen/_25sdp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:src="@drawable/view_and_edit_icon"
+                                        android:contentDescription="@string/view_take_icon" />
+
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:fontFamily="@string/font_regular"
+                                android:text="@string/view_works"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:visibility="gone"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="15dp"
+                                android:visibility="gone"
+                                android:background="@color/grey" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginBottom="@dimen/_10sdp"
+
+                            android:id="@+id/sync"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:visibility="visible"
+                            android:onClick="@{()-> activity.openPendingScreen()}"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sync"
+                                android:fontFamily="@string/font_regular"
+                                android:textColor="#000080"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_regular"
+                                android:text="@string/pending_uploads"
+                                android:textColor="#000000"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/_13sdp"
+                                android:background="@color/grey" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_13sdp"
+                android:text="@string/software_d_a_d_b_nic"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@string/font_regular"
+                />
+
+        </RelativeLayout>
+
+        <!-- The main content view displays when the drawer is hidden -->
+
+        <!-- The navigation drawer -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rellay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:background="@drawable/menu_bg_bg_new_"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#34C51162">
+
+                    <RelativeLayout
+                        android:id="@+id/imgUser1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_margin="9dp"
+                            android:id="@+id/profile_icon"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_fertilizer"
+                            />
+                        <ImageView
+                            android:visibility="gone"
+                            android:padding="@dimen/_3sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_toEndOf="@+id/profile_icon"
+                            android:id="@+id/time_image"
+                            android:contentDescription="@string/profile_icon" />
+                        <TextView
+                            android:fontFamily="@string/font_regular"
+                            android:textStyle="bold"
+                            android:padding="@dimen/_3sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/_15sdp"
+                            android:layout_toEndOf="@+id/profile_icon"
+                            android:id="@+id/time_image_text"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:id="@+id/tv_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgUser1"
+                        android:layout_marginTop="5sp"
+                        android:fontFamily="@string/font_regular"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_14sdp" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:id="@+id/designation1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name1"
+                        android:fontFamily="@string/font_regular"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_below="@+id/designation1"
+                            android:id="@+id/timer"
+                            android:fontFamily="@string/font_regular"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:padding="@dimen/_10sdp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <View
+                    android:id="@+id/vv"
+                    android:layout_below="@+id/rellay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_4">
+
+                </View>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/sync_count_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vv"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/followersBg"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@string/font_regular"
+                            android:text="@string/pending_works_for_upload"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/followingBg"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp">
+
+
+
+                        <TextView
+                            android:id="@+id/pendingCount1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_regular"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_regular"
+                            android:text=""
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/sync_count_layout1"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:ignore="UselessParent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+
+                                    <androidx.cardview.widget.CardView
+                                        android:clickable="true"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_45sdp"
+                                        app:cardBackgroundColor="@color/white"
+                                        android:id="@+id/add_mcc_card1"
+                                        app:cardElevation="@dimen/_12sdp"
+                                        android:outlineSpotShadowColor="@color/purple"
+                                        tools:ignore="UnusedAttribute">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <View
+                                                android:visibility="gone"
+                                                android:id="@+id/v_11"
+                                                android:layout_width="@dimen/_4sdp"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/line_shape_curved_bg"/>
+
+                                            <Button
+                                                android:layout_toEndOf="@+id/icon_11"
+                                                android:layout_marginStart="@dimen/_5sdp"
+                                                android:onClick="@{()-> activity.viewVillageList()}"
+                                                android:clickable="true"
+                                                android:padding="@dimen/_4sdp"
+                                                android:id="@+id/add_new_mcc1"
+                                                android:layout_width="match_parent"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_height="match_parent"
+                                                android:text="@string/add_new_mcc"
+                                                android:fontFamily="@string/font_regular"
+                                                android:background="@color/full_transparent"
+                                                android:textAlignment="textStart"
+                                                android:textAllCaps="false"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                />
+                                            <ImageView
+                                                android:padding="@dimen/_3sdp"
+                                                android:id="@+id/icon_11"
+                                                android:layout_centerVertical="true"
+                                                android:layout_width="@dimen/_25sdp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_marginStart="@dimen/_10sdp"
+                                                android:src="@drawable/add_user"
+                                                android:contentDescription="@string/add_icon" />
+
+
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_marginTop="0.2dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_45sdp"
+                                        app:cardBackgroundColor="@color/white"
+                                        android:id="@+id/edit_mcc_card1"
+                                        app:cardElevation="@dimen/_12sdp"
+                                        android:outlineSpotShadowColor="@color/purple"
+                                        tools:ignore="UnusedAttribute">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <View
+                                                android:visibility="gone"
+                                                android:id="@+id/v_21"
+                                                android:layout_width="@dimen/_4sdp"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/line_shape_curved_bg"
+                                                tools:ignore="TooManyViews" />
+
+                                            <Button
+                                                android:layout_toEndOf="@+id/icon_31"
+                                                android:layout_marginStart="@dimen/_5sdp"
+                                                android:onClick="@{()-> activity.viewMCCBasicDetailsList()}"
+                                                android:clickable="true"
+                                                android:background="@color/full_transparent"
+                                                android:id="@+id/edit_mcc1"
+                                                android:fontFamily="@string/font_regular"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_centerHorizontal="true"
+                                                android:text="@string/edit_mcc"
+                                                android:textAlignment="textStart"
+                                                android:textAllCaps="false"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_12sdp"
+                                                />
+
+                                            <ImageView
+                                                android:padding="@dimen/_3sdp"
+                                                android:id="@+id/icon_31"
+                                                android:layout_centerVertical="true"
+                                                android:layout_width="@dimen/_25sdp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_marginStart="@dimen/_10sdp"
+                                                android:src="@drawable/view_and_edit_icon"
+                                                android:contentDescription="@string/view_edit_icon" />
+
+
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:text="@string/view_works"
+                                        android:fontFamily="@string/font_regular"
+                                        android:textAlignment="center"
+                                        android:textColor="#000000"
+                                        android:textSize="18sp"
+                                        android:visibility="gone"/>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginTop="15dp"
+                                        android:visibility="gone"
+                                        android:background="@color/grey" />
+
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_marginTop="0.2dp"
+                                    android:clickable="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_45sdp"
+                                    app:cardBackgroundColor="@color/white"
+                                    android:id="@+id/log_out_card"
+                                    app:cardElevation="@dimen/_12sdp"
+                                    android:outlineSpotShadowColor="@color/purple"
+                                    tools:ignore="UnusedAttribute">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+
+                                        <Button
+                                            android:layout_toEndOf="@+id/img_1"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:onClick="@{()-> activity.logout()}"
+                                            android:clickable="true"
+                                            android:padding="@dimen/_4sdp"
+                                            android:id="@+id/log_out_btn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="@string/logout"
+                                            android:fontFamily="@string/font_regular"
+                                            android:textAlignment="textStart"
+                                            android:background="@color/full_transparent"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            />
+                                        <ImageView
+                                            android:id="@+id/img_1"
+                                            android:padding="@dimen/_3sdp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_width="@dimen/_25sdp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:src="@drawable/logout"
+                                            app:tint="@color/darkblue"
+                                            android:contentDescription="@string/log_out_icon" />
+
+
+                                    </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+
+                            </LinearLayout>
+
+                        </ScrollView>
+
+                    </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/_12sdp"
+                    android:outlineSpotShadowColor="@color/purple"
+                    tools:ignore="UnusedAttribute">
+                    <LinearLayout
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:id="@+id/sync1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:visibility="visible"
+                        android:onClick="@{()-> activity.openPendingScreen()}"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sync"
+                            android:fontFamily="@string/font_regular"
+                            android:textColor="#000080"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@string/font_regular"
+                            android:text="@string/pending_uploads"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:background="@color/grey" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

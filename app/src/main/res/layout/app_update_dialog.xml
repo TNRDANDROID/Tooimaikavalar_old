@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="activity"
+            type="com.nic.thooimaikaavalar_old.activity.AppUpdateDialog" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/swm"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@string/font_regular" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/warning"
+            android:contentDescription="@string/warning_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/edit_text_padding"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:padding="@dimen/padding"
+            android:text="@string/you_need_to_update"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:fontFamily="@string/font_regular"/>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:padding="@dimen/padding"
+            android:text="@string/this_version_of_swm_is_no_longer_supported_please_go_to_official_site_and_install_new_version"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:fontFamily="@string/font_regular" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/padding"
+                android:text="@string/cancel"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                android:fontFamily="@string/font_regular" />
+
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin"
+                android:layout_weight="1"
+                android:background="@drawable/new_bg_log_in_btn_purple"
+                android:gravity="center"
+                android:padding="@dimen/padding"
+                android:text="@string/update"
+                android:onClick="@{()->activity.showGooglePlay()}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/menu_title_size"
+                android:fontFamily="@string/font_regular"
+                tools:ignore="SpUsage" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_12sdp"
+        tools:ignore="UnusedAttribute">
+
+        <RelativeLayout
+            android:layout_margin="@dimen/_7sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@mipmap/close_icon"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/close_icon"
+                android:contentDescription="@string/close_icon" />
+
+            <LinearLayout
+                android:layout_below="@id/close_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/thooimai_kavalar_name" />
+
+                <EditText
+                    android:fontFamily="@string/font_regular"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/purple"
+                    android:hint="@string/thooimai_kavalar_name"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/thooimai_kavalar_mobile_number" />
+
+                <EditText
+                    android:fontFamily="@string/font_regular"
+                    android:singleLine="true"
+                    android:backgroundTint="@color/purple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:hint="@string/thooimai_kavalar_mobile_number"
+                    android:importantForAutofill="no" />
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/date_of_engage" />
+
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:id="@+id/date_of_engage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:hint="@string/date_of_engage"
+                    />
+
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/date_of_training" />
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:id="@+id/date_of_training"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:hint="@string/date_of_training"
+                    />
+
+                <Button
+                    android:fontFamily="@string/font_regular"
+                    android:id="@+id/update_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:background="@drawable/new_bg_log_in_btn_purple"
+                    android:text="@string/update"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false" />
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

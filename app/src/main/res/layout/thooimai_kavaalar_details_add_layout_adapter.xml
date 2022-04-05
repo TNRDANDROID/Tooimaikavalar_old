@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mask="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.nic.thooimaikaavalar_old.adapter.ThooimaiKaavalrEnterDetailsAdapter" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_12sdp"
+        mask:ignore="UnusedAttribute">
+
+        <RelativeLayout
+            android:padding="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                mask:ignore="UselessParent">
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/thooimai_kavalar_name" />
+
+                <EditText
+                    android:fontFamily="@string/font_regular"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:hint="@string/thooimai_kavalar_name"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/thooimai_kavalar_mobile_number" />
+
+                <EditText
+                    android:fontFamily="@string/font_regular"
+                    android:singleLine="true"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:hint="@string/thooimai_kavalar_mobile_number"
+                    android:importantForAutofill="no" />
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/date_of_engage" />
+
+
+                <EditText
+                    android:fontFamily="@string/font_regular"
+                    android:id="@+id/date_of_engage"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:textSize="@dimen/_12sdp"
+                    android:hint="@string/date_of_engage"
+                    android:backgroundTint="@color/colorPrimary"
+
+                    android:importantForAutofill="no" />
+
+
+                <TextView
+                    android:fontFamily="@string/font_regular"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/date_of_training" />
+
+                <EditText
+                    android:fontFamily="@string/font_regular"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:focusable="false"
+                    android:id="@+id/date_of_training"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:textSize="@dimen/_12sdp"
+                    android:hint="@string/date_of_training"
+
+                    android:importantForAutofill="no" />
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
